@@ -1,24 +1,23 @@
-import { BrowserRouter as Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-// import Error404 from "containers/errors/Error404";
-// import Home from "containers/pages/Home";
-// import Blog from "containers/pages/blog/Blog";
-// import Dashboard from "containers/pages/Dashboard";
-// import ResetPassword from "containers/auth/ResetPassword";
-// import ResetPasswordConfirm from "containers/auth/ResetPasswordConfirm";
-// import EditPost from "containers/pages/blog/EditPost";
+// import { AnimatePresence } from "framer-motion";
+import Error404 from "containers/errors/Error404";
+import Home from "containers/pages/Home";
+import Blog from "containers/pages/blog/Blog";
+import Dashboard from "containers/pages/Dashboard";
+import ResetPassword from "containers/auth/ResetPassword";
+import ResetPasswordConfirm from "containers/auth/ResetPasswordConfirm";
+import EditPost from "containers/pages/blog/EditPost";
 
 function AnimatedRoutes() {
-  const location = useLocation();
-
   return (
     <Routes>
       {/* Error Display */}
-      {/* <Route path="*" element={<Error404 />} /> */}
+      <Route path="*" element={<Error404 />} />
 
       {/* Home Display */}
-      {/* <Route path="/" element={<Home />} /> */}
-      {/* <Route path="/forgot_password" element={<ResetPassword />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/forgot_password" element={<ResetPassword />} />
       <Route
         path="/password/reset/confirm/:uid/:token"
         element={<ResetPasswordConfirm />}
@@ -26,8 +25,10 @@ function AnimatedRoutes() {
 
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:slug" element={<EditPost />} /> */}
+      <Route path="/blog/:slug" element={<EditPost />} />
     </Routes>
+    // <AnimatePresence>
+    // </AnimatePresence>
   );
 }
 export default AnimatedRoutes;
